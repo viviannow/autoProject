@@ -1,0 +1,51 @@
+2015/2/5
+
+node安装  
+
+npm安装：是nodejs的包管理器
+
+nodejs中的回调 
+
+HTTP服务器 客户端建立 
+
+express：是web框架 npm install -g express 
+
+jade是模板引擎
+
+
+------------------------------------
+http服务器
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).listen(3000, "127.0.0.1");
+console.log('Server running at http://127.0.0.1:3000/');
+
+
+------------------------------------
+
+
+客户
+
+var http = require('http');
+
+var options = {
+  host: 'shapeshed.com',
+  port: 80,
+  path: '/'
+};
+
+http.get(options, function(res) {
+  if (res.statusCode  == 200) {
+    console.log("The site is up!");
+  }
+  else {
+    console.log("The site is down!");
+  }
+}).on('error', function(e) {
+  console.log("There was an error: " + e.message);
+});
+
+
+
