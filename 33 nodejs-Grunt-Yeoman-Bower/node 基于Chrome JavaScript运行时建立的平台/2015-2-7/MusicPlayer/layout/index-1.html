@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Music Player</title>
+	<link href="css/index.css" type="text/css" rel="stylesheet" >
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script>
+	//http://file.dengo.org/demo/html5player/index.html
+	$(document).ready(function() {
+		
+		$('.list li').on('click', function() {
+		
+			var path_url = 'http://localhost/',
+				player = $('#player').get(0);
+			
+			player.src = path_url + this.innerHTML + '.OGG';
+			
+			player.play();
+			
+			//console.log( player );
+			
+			//不能直接这里获取duration，还没有读取到信息
+			//console.log( 'duration', player.duration );
+			
+			player.addEventListener('durationchange', function(e) {
+				console.log('Event.durationchange : duration -> ', player.duration);
+			});
+			
+			player.addEventListener('emptied', function() {
+				console.log('Event.emptied');
+			});
+			
+			player.addEventListener('palying', function() {
+				console.log('Event.playing');
+			});
+			
+			player.addEventListener('loadeddata', function(ev) {
+				console.log('Event.loadeddata', ev);
+			});
+			
+			player.addEventListener('loadedmetadata', function(ev) {
+				console.log('Event.loadedmetadata', ev);
+			});
+			
+			player.addEventListener('progress', function(ev) {
+				console.log('Event.progress', ev);
+				
+				//console.log('buffered', player.buffered.length);
+				
+			});
+			
+			player.addEventListener('timeupdate', function() {
+				//console.log(this.currentTime + ' / ' + this.duration);
+				
+				var scale = this.currentTime / this.duration;
+				
+				var iLeft = 300 * scale - 11;
+				
+				console.log(scale);
+				
+				$('.processbar_play_btn').css('left', iLeft);
+				
+				/*if (scale > 0.02) {
+					//player.currentTime = 100;
+					player.pause();
+					setTimeout(function() {
+						player.play();
+					},1000);
+				}*/
+				
+			});
+			
+			/*setInterval(function() {
+				console.log( 'duration', player.duration + ' / ' + convertTime(player.duration) );
+			}, 1000);*/
+		
+		});
+		
+		function convertTime(seconds) {
+			return [ parseInt(seconds / 60), parseInt(seconds % 60) ];
+		}
+		
+	});
+	</script>
+</head>
+
+<body>
+	<div class="header" data-drag-window="1">
+		<a href="javascript:;" class="btn_prev"></a>
+		<a href="javascript:;" class="btn_play"></a>
+		<a href="javascript:;" class="btn_next"></a>
+		
+		<div class="process_bar">
+			<div class="process_bar_loaded"></div>
+			<div class="process_bar_play">
+				<div class="processbar_play_btn"></div>
+			</div>
+		</div>
+		
+		<div class="close"></div>
+	</div>
+	
+	<ul class="list">
+		<li>My Love</li>
+		<li>Soledad</li>
+	</ul>
+		
+	<div class="footer"></div>
+	
+	<audio id="player" controls src=""></audio>
+</body>
+</html>

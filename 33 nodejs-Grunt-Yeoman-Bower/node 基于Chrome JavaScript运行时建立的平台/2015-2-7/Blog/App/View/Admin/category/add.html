@@ -1,0 +1,52 @@
+<%include ../common/header.html%>
+<body style="margin-top: 70px;">
+
+<%include ../common/nav.html%>
+
+<div class="container">
+
+	<%include nav.html%>
+
+	<form role="form" method="post">
+
+		<div class="form-group">
+			<label for="name">类别名称：</label>
+			<input type="text" class="form-control" id="name" name="name" placeholder="50个字符以内">
+		</div>
+
+		<div class="form-group">
+			<label for="is_comment">评论设置<span class="text-primary">（该设置对该评论下的所有文章生效）</span>：</label>
+			<div class="radio">
+				<label>
+					<input type="radio" value="1" name="is_comment" checked>开放评论（用户无需登陆即可发表评论）
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" value="2" name="is_comment">注册评论（只有注册并登陆的用户才可以发表评论）
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" value="0" name="is_comment">不允许评论
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="is_enable">状态：</label>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="1" name="is_enable" checked>启用
+				</label>
+			</div>
+		</div>
+
+		<input type="submit" value="确定提交" class="btn btn-primary" />
+
+	</form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Music Player</title>
+	<style>
+	body {margin: 0; padding: 0;}
+	audio {margin: 0; padding: 0;}
+	</style>
+</head>
+
+<body>
+	<audio id="player" style="width: 100%;" controls src="http://m1.music.126.net/pSPz8Zk1HLjYTyHEphgZmg==/2790560511318889.mp3"></audio>
+	<input type="button" id="refreshListBtn" value="Refresh" />
+	<ul id="musicList"></ul>
+</body>
+</html>
+
+<script>
+var nodejs = global,
+	appPath = nodejs.process.cwd(),
+	musicPath = appPath + '/Music',
+	musicFiles = [],
+
+	fs = require('fs'),
+
+	refreshListBtn = document.getElementById('refreshListBtn'),
+	musicPlayer = document.getElementById('player'),
+	musicList = document.getElementById('musicList');
+
+	//musicPlayer.preload = true;
+
+	getMusicList();
+
+	refreshListBtn.onclick = getMusicList;
+
+	fs.watch(musicPath, function(event, filename) {
+		getMusicList();	//可以优化
+		//alert(event + ' / ' + filename);
+	});
+
+/*
+	获取musicPath下的所有文件
+*/
+function getMusicList() {
+	fs.readdir(musicPath, function(err, files) {
+		if (err) {
+			alert('音乐列表读取失败');
+			return;
+		}
+
+		musicList.innerHTML = '';
+
+		musicFiles = files;
+
+		var docFragment = document.createDocumentFragment(),
+			oLi = null;
+		for (var i = 0; i < musicFiles.length; i++) {
+			oLi = document.createElement('li');
+			oLi.innerHTML = musicFiles[i];
+			oLi.index = i;
+			oLi.onclick = function() {
+				musicPlayer.src = musicPath + '/' + musicFiles[this.index];
+				musicPlayer.play();
+			}
+			docFragment.appendChild(oLi);
+		};
+		musicList.appendChild(docFragment);
+
+	});
+}
+</script>

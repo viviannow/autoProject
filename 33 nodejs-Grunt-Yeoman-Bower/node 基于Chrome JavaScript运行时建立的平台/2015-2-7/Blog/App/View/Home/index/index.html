@@ -1,0 +1,71 @@
+<%include ../common/header.html%>
+<body style="margin-top: 70px;">
+
+<%include ../common/nav.html%>
+
+<div class="container">
+
+	<!--<div class="jumbotron">
+		<h1>Hello,<%=userInfo.username%></h1>
+	</div>-->
+
+	<div class="rows">
+
+		<div class="col-md-12">
+			<% if(contentList.data.length == 0) { %>
+			<div class="jumbotron">
+				<h4>Null</h4>
+			</div>
+			<% } else { %>
+
+				<% contentList.data.forEach(function(v) { %>
+				<blockquote>
+					<dl>
+						<dt>
+						<h3><a href="/view/<%=v.id%>"><%=v.title%></a></h3>
+						</dt>
+						<dd class="text-muted text-right">
+							<span><i class="glyphicon glyphicon-time"></i> 2014-1-21</span>
+						</dd>
+						<dd>
+							<% if (v.password) { %>
+							<p>该文章已经被加密了...</p>
+							<% } else if (!v.description) { %>
+							<p>该文章没有简介，你可以点击 <a href="/view/<%=v.id%>">[详细]</a> 阅读详细内容</p>
+							<% } else { %>
+							<p><%=v.description%> <a href="/view/<%=v.id%>">[详细]</a></p>
+							<% } %>
+						</dd>
+					</dl>
+				</blockquote>
+				<% }) %>
+
+			<% } %>
+
+			<nav>
+				<ul class="pager">
+					<li class="previous">
+						<% if (categoryInfo.id) { %>
+						<a href="/<%=categoryInfo.id%>/page/<%=contentList.page-1%>"><span aria-hidden="true">&larr;</span> Prev</a>
+						<% } else { %>
+						<a href="/page/<%=contentList.page-1%>"><span aria-hidden="true">&larr;</span> Prev</a>
+						<% } %>
+					</li>
+					<li class="next">
+						<% if (categoryInfo.id) { %>
+						<a href="/<%=categoryInfo.id%>/page/<%=contentList.page+1%>"><span aria-hidden="true">&rarr;</span> Next</a>
+						<% } else { %>
+						<a href="/page/<%=contentList.page+1%>"><span aria-hidden="true">&rarr;</span> Next</a>
+						<% } %>
+					</li>
+				</ul>
+			</nav>
+
+		</div>
+
+	</div>
+
+</div>
+
+</body>
+</html>

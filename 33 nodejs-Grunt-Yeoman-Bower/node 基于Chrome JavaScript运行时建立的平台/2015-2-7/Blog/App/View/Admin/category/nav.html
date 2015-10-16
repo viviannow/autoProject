@@ -1,0 +1,27 @@
+<ul class="nav nav-pills" role="tablist" style="margin-bottom: 20px;">
+
+	<% if (http.action == 'index') { %>
+		<li role="presentation" class="active"><a href="/admin/category">列表</a></li>
+	<% } else { %>
+		<li role="presentation"><a href="/admin/category">列表</a></li>
+	<% } %>
+
+	<% if (http.action == 'add') { %>
+		<li role="presentation" class="active"><a href="/admin/category/add">添加</a></li>
+	<% } else { %>
+		<li role="presentation"><a href="/admin/category/add">添加</a></li>
+	<% } %>
+
+	<% if (http.action == 'edit') { %>
+		<li role="presentation" class="active"><a href="/admin/category/edit/<%=categoryInfo.id%>">修改</a></li>
+	<% } %>
+
+	<!--
+	<% if (http.action == 'recycle') { %>
+		<li role="presentation" class="active"><a href="/admin/category/recycle">回收站</a></li>
+	<% } else { %>
+		<li role="presentation"><a href="/admin/category/recycle">回收站</a></li>
+	<% } %>
+	-->
+
+</ul>

@@ -1,0 +1,42 @@
+此处使用的命令有：
+
+??? 卸载: npm uninstall -g express
+
+??? 安装指定版本: npm install -g express@3.5.0
+
+??? 查看版本: express -V
+
+??? 注意express -V中的V要大写,不然很多版本中会不识别
+
+
+--------------------------
+当然,你只是想要解决express命令不能识别的问题.此时你已经达到目的了.但是为什么新版本我们用不了呢?
+
+原来,最新express4.0版本中将命令工具分家出来了
+
+(项目地址:https://github.com/expressjs/generator),
+
+所以我们还需要安装一个命令工具,命令如下:
+
+npm install -g express-generator
+=----------------------------
+?既然安装好了我们就要测试一下新安装的express到底可不可以使用
+
+??? 于是我使用express创建一个工程:
+
+?? express helloworld
+
+?? 新版本中命令发生了一些改变, 创建好project之后还需要用npm进行添加依赖和启动:
+
+?? cd helloworld
+
+?? npm install
+
+?? npm start
+
+?? 然后新创建的helloworld就已经运行在3000端口上
+
+
+
+
+?访问http://localhost:3000/就看到熟悉的页面了

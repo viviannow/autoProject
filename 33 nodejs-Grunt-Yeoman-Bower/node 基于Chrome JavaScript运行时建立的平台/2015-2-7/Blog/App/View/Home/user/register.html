@@ -1,0 +1,139 @@
+<%include ../common/header.html%>
+<body style="margin-top: 70px;">
+
+<style>
+	.img-avatar {max-width: 50px;}
+</style>
+
+<%include ../common/nav.html%>
+
+<div class="container">
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title"><strong>注册用户</strong></h3>
+		</div>
+		<div class="panel-body">
+
+			<form method="post" class="form-horizontal" role="form">
+
+				<div class="form-group">
+					<label for="username" class="col-md-2 control-label">用户名：</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control" id="username" name="username" placeholder="请输入您要注册的用户名，3-20个字符之间">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="password" class="col-md-2 control-label">密码：</label>
+					<div class="col-md-4">
+						<input type="password" class="form-control" id="password" name="password" placeholder="请输入您的密码，20个字符以内">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="repassword" class="col-md-2 control-label">密码：</label>
+					<div class="col-md-4">
+						<input type="password" class="form-control" id="repassword" name="repassword" placeholder="请重复输入您的密码">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="" class="col-md-2 control-label">请选择您的头像：</label>
+					<div class="col-md-10">
+
+						<div class="rows">
+
+							<div class="col-md-1 text-center">
+								<label>
+									<img src="/resource/avatar/1.jpg" alt="" class="img-circle img-thumbnail img-avatar">
+									<input type="radio" name="avatar" value="1" checked />
+								</label>
+							</div>
+							<div class="col-md-1 text-center">
+								<label>
+									<img src="/resource/avatar/2.jpg" alt="" class="img-circle img-thumbnail img-avatar">
+									<input type="radio" name="avatar" value="2" />
+								</label>
+							</div>
+							<div class="col-md-1 text-center">
+								<label>
+									<img src="/resource/avatar/3.jpg" alt="" class="img-circle img-thumbnail img-avatar">
+									<input type="radio" name="avatar" value="3" />
+								</label>
+							</div>
+							<div class="col-md-1 text-center">
+								<label>
+									<img src="/resource/avatar/4.jpg" alt="" class="img-circle img-thumbnail img-avatar">
+									<input type="radio" name="avatar" value="4" />
+								</label>
+							</div>
+							<div class="col-md-1 text-center">
+								<label>
+									<img src="/resource/avatar/5.jpg" alt="" class="img-circle img-thumbnail img-avatar">
+									<input type="radio" name="avatar" value="5" />
+								</label>
+							</div>
+							<div class="col-md-1 text-center">
+								<label>
+									<img src="/resource/avatar/6.jpg" alt="" class="img-circle img-thumbnail img-avatar">
+									<input type="radio" name="avatar" value="6" />
+								</label>
+							</div>
+							<div class="col-md-1 text-center">
+								<label>
+									<img src="/resource/avatar/7.jpg" alt="" class="img-circle img-thumbnail img-avatar">
+									<input type="radio" name="avatar" value="7" />
+								</label>
+							</div>
+							<div class="col-md-1 text-center">
+								<label>
+									<img src="/resource/avatar/8.jpg" alt="" class="img-circle img-thumbnail img-avatar">
+									<input type="radio" name="avatar" value="8" />
+								</label>
+							</div>
+							<div class="col-md-1 text-center">
+								<label>
+									<img src="/resource/avatar/9.jpg" alt="" class="img-circle img-thumbnail img-avatar">
+									<input type="radio" name="avatar" value="9" />
+								</label>
+							</div>
+							<div class="col-md-1 text-center">
+								<label>
+									<img src="/resource/avatar/10.jpg" alt="" class="img-circle img-thumbnail img-avatar">
+									<input type="radio" name="avatar" value="10" />
+								</label>
+							</div>
+							<div class="col-md-1 text-center">
+								<label>
+									<img src="/resource/avatar/11.jpg" alt="" class="img-circle img-thumbnail img-avatar">
+									<input type="radio" name="avatar" value="11" />
+								</label>
+							</div>
+							<div class="col-md-1 text-center">
+								<label>
+									<img src="/resource/avatar/12.jpg" alt="" class="img-circle img-thumbnail img-avatar">
+									<input type="radio" name="avatar" value="12" />
+								</label>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-offset-2 col-md-10">
+						<button type="submit" class="btn btn-primary">注册</button>
+						<a href="/login" class="btn btn-success">登陆</a>
+					</div>
+				</div>
+
+			</form>
+
+		</div>
+	</div>
+
+</div>
+</body>
+</html>

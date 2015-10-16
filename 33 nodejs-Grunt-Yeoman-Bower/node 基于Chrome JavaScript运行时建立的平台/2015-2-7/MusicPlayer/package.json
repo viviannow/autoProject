@@ -1,0 +1,23 @@
+{
+  "main": "./layout/index.html",
+  "name": "Music Player",
+  "description": "Music Player of node-webkit",
+  "version": "0.1.0",
+  "keywords": [ "Music", "Player", "demo", "node-webkit" ],
+  "window": {
+    "title": "Music Player",
+    "icon": "./sources/icon/icon_32.png",
+    "toolbar": false,
+    "frame": false,
+    "width": 499,
+    "height": 288,
+    "position": "center",
+    "min_width": 499,
+    "min_height": 288,
+    "max_width": 499,
+    "max_height": 288
+  },
+  "webkit": {
+    "plugin": true
+  }
+}

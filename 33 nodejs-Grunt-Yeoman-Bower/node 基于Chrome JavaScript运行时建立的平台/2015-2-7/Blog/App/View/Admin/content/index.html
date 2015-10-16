@@ -1,0 +1,48 @@
+<%include ../common/header.html%>
+<body style="margin-top: 70px;">
+
+	<%include ../common/nav.html%>
+
+	<div class="container">
+
+		<%include nav.html%>
+
+		<table class="table table-hover">
+
+			<tr>
+				<th style="width: 50px;">#ID</th>
+				<th style="width: 150px;">分类</th>
+				<th>文章标题</th>
+				<th style="width: 100px;">是否加密</th>
+				<th style="width: 100px;">是否允许评论</th>
+				<th style="width: 300px;" class="text-center">操作</th>
+			</tr>
+
+			<% dataList.data.length && dataList.data.forEach(function(rs) { %>
+			<tr>
+				<td><%=rs.id%></td>
+				<th><%=rs.category_name%></th>
+				<td><%=rs.title%></td>
+				<td><%if (rs.password!=''){%>是<%}else{%>否<%}%></td>
+				<td><%=rs.is_comment_text%></td>
+				<td class="text-center">
+					<a href="/admin/content/edit/<%=rs.id%>">修改</a> |
+					<a href="/admin/content/delete/<%=rs.id%>" onclick="return confirm('该操作将会同时清空该分类下的所有文章内容\n你确定要继续吗？')">删除</a>
+				</td>
+			</tr>
+			<% }) %>
+			
+		</table>
+
+		<div class="row miaov-mb-20">
+			<div class="col-md-12">
+
+				<%include ../common/page.html%>
+
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
