@@ -1,0 +1,38 @@
+php中可以通过post or get 获取到url中的参数值，最近接触了node那么在nodejs里是怎么做的呢，上代码了！
+//需要使用的模块 http   url
+当前url   http://localhost:8888/select?aa=001&bb=002
+var http = require('http');
+var URL = require('url');
+http.createServer(function(req, res){
+   var arg = url.parse(req.url).query;  //方法一arg => aa=001&bb=002
+   var arg = url.parse(req.url, true).query;  //方法二arg => { aa: '001', bb: '002' }
+   console.log(arg.aa);//返回001
+   console.log(arg.bb);//返回002
+   //然后就可以根据所得到的数据处理了
+
+}).listen(8888);//建立服务器并监听端口
+
+获取特定url参数值
+var testUrl =  'http://localhost:8888/select?aa=001&bb=002';
+var p = URL.parse(testUrl); 
+console.log(p.href); //取到的值是：http://localhost:8888/select?aa=001&bb=002
+console.log(p.protocol); //取到的值是：http: 
+console.log( p.hostname);//取到的值是：locahost
+console.log(p.host);//取到的值是：localhost:8888
+console.log(p.port);//取到的值是：8888
+console.log(p.path);//取到的值是：/select?aa=001&bb=002
+console.log(p.hash);//取到的值是：null 
+console.log(p.query);// 取到的值是：aa=001
+在此值得注意的是当语句 是 var p = URL.parse(testUrl, true) 时,p.query则返回的是如：{aa:'001'}这样的对象， 直接打印p.query则返回 [object Object]，这时我们可以这样 写： console.log(p.query.aa); //取到的值是：001
+console.log( p.pathname);//取到的值是：/select
+
+下面附上js的获取方法：
+当前URL   http://mj_0203.0fees.net/index.php?aa=001&bb=002
+document.location:        http://mj_0203.0fees.net/index.php?aa=001&bb=002
+document.URL:             http://mj_0203.0fees.net/index.php?aa=001&bb=002
+document.location.href:   http://mj_0203.0fees.net/index.php?aa=001&bb=002
+self.location.href:       http://mj_0203.0fees.net/index.php?aa=001&bb=002
+top.location.href:        http://mj_0203.0fees.net/index.php?aa=001&bb=002
+parent.document.location: http://mj_0203.0fees.net/index.php?aa=001&bb=002
+top.location.hostname:    mj_0203.0fees.net
+location.hostname:        mj_0203.0fees.net
