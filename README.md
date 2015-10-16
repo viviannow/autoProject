@@ -1,4 +1,4 @@
-# autoProject    自动货项目实践 
+# autoProject    自动化项目实践 
 
 这是本人的一个自动化项目的实践，
 
