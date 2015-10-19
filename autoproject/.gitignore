@@ -39,7 +39,29 @@
 #/.sass
 #*.lock
 
+#node_modules
+#temp
+#dist
+#.sass-cache
+#.tmp
+#.bowerrc
+#.editorconfig
+#.jshintrc
+#app/bower_components
+#target
+
+
+
+
 
 
 /node_modules
 /bower_components
+
+node_modules
+temp
+dist
+.sass-cache
+.tmp
+app/bower_components
+
