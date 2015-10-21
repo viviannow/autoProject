@@ -1,3 +1,58 @@
+初次提交本地git 到远程github:
+
+8、创建本地新项目工作树
+# mkdir new-project
+# cd new-project
+# git init
+# touch README
+# git add README
+# git commit -m 'first commit'
+定义远程服务器别名origin
+#  git remote add origin git@github.com:xxx/new-project.git   
+本地和远程合并，本地默认分支为master
+# git push origin master  
+
+GitHub网站上就可以看见了， http://github.com/xxx/new-project
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 网址：廖雪峰的官方网站  http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
 
 客户端下载   http://git-scm.com/download/  git bush 或  git gui
