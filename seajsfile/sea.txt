@@ -1,0 +1,91 @@
+【原理】
+sea.js -> 实现了js中的模块化开发，解决了js中冲突和依赖的问题
+
+【use的用法】
+通过seajs下的use方法来实现文件的加载
+如果我们加载的文件（模块）的后缀是.js的，可以省略
+第一个参数[字符串/数组]：要加载的模块（或模块列表）
+第二个参数[函数]：当第一个参数的模块或模块列表加载完成以后指定的回调函数
+
+ seajs.use(['./js2/a', './js2/b'], function() {
+    //console.log(1);
+    console.log(a);
+});
+
+【seajs采用的commonjs规范】
+commonjs规范定义了，如果去实现（如果要去实现）一个模块管理器的话，需要遵循的一些规则
+比如：需要提供一个define的全局方法，这个方法中接收什么样的参数，已经他所需要实现的功能等等
+一个文件就是一个模块
+
+【config配置】
+  seajs.config({
+    //别名配置
+    alias: {
+        'es5-safe': './gallery/es5-safe/0.9.3/es5-safe'
+    },
+    // 路径配置
+    paths: {
+        'gallery': 'https://a.alipayobjects.com/gallery'
+    },
+    // 变量配置
+    vars: {
+        'locale': 'zh-cn'
+    },
+
+    //debug: true
+});
+
+seajs.use(['gallery/{locale}'], function() {
+
+});
+
+【插件】
+<script src="seajs-css.js"></script>
+<script>
+seajs.use(['./css.css'], function() {
+});
+//seajs
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
