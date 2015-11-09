@@ -1,0 +1,50 @@
+【overflow】
+overflow 可以包围float的子元素
+【盒阴影】
+box-shadow:x y 模糊 扩展 颜色 内外
+【input】
+input::-webkit-input-placeholoder{color:#ccc;}
+【水平剧中】
+外 {text-aligin:center}  内 ul{display:inline-block}  li{float:left}  
+【变换】
+-webkit-transition:1s all
+
+-moz-transition:1s all
+
+transition:1s all
+
+
+垂直居中：
+display:table-cell;
+vertical-align:middle;
+text-align:center
+
+【文字阴影】
+text-shadow:4px 4px 5px #aaa
+【变换】
+
+transform:函数名（x,y,数值）
+
+transform:scale(1.5)  缩放
+
+transform:rotate(-30deg) 旋转
+
+transform:skew(50deg,50deg) 倾斜
+
+transform:translate(-50px,50px) 平移
+【变换中心点】
+transform-origin:bottom right;
+
+
+【边三角 与 before用法：】
+
+div:before{
+	content:"";
+	posibion:absolute;
+	top:20px;
+	left:20px;
+	border:12px solid;
+	height:0px
+	widht:0px;
+	border-color:transparent #ccc transparent transparent;
+}
