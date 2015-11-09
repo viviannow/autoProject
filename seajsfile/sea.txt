@@ -1,3 +1,6 @@
+网站
+http://seajs.org/docs/#docs
+
 【原理】
 sea.js -> 实现了js中的模块化开发，解决了js中冲突和依赖的问题
 
