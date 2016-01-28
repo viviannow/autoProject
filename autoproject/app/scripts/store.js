@@ -1,1 +1,0 @@
-Myemberapp.ApplicationAdapter = DS.FixtureAdapter;
