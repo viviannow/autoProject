@@ -1,0 +1,182 @@
+
+APP开发注意几点事项
+
+
+在用APICLOUD的APP的开发过程中，一个页面的布局方式最好是通过窗口的套用来完成,即win+frame，
+
+
+html5：在创建html时为了防止页面缩放等不兼容效果，要创建个viewport ：<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+
+在IOS设备上，有时会将数字转为手机号，这里也要禁止下：<meta name="format-detection" content="telephone=no"/>
+
+CSS：在定义CSS时记得要定义下默认样式api.js：  为apicloud封装的js方法，如果使用记得先要引入，在script文件夹内
+
+
+
+模块的引入和使用，在apicloud的模块store里面提供了大量的模块，我们可以直接在html里面引入使用
+
+使用方法：在需要使用模块的页面中加入:var obj = api.require('模块名');
+
+然后参考对应模块的使用方法。如果在一个页面中频繁使用到一个模块的功能，最好就将其声明称全局变量。
+
+
+================================================
+
+1、H5本地保存 localStorage   在apicloud中已经封装的更简单了
+$api.setStorage('name','key');//设置
+$api.getStorage('name');//获得指定name的值
+$api.rmStorage('name');//清除指定name的值
+$api.clearStorage();//清楚全部本地数据
+
+
+
+2、文件存储方式
+
+readFile和writFile     fs模块
+如果不牵扯到文件的修改的话建议使用readFile和writeFile，操作还要方便些。
+这些主要用在保存大数据和保存内容缓存，保存文件的时候个人觉得保存到缓存文件夹里面，获取方式  var cacheDir = api.cacheDir;
+例子，比如我们要将内容列表写到本地，然后将列表的内容分别保存一个文件，下次打开APP的时候先查询有没有对应的本地文件，没有的话或者有更新再从服务器读取
+
+以JSON数据为例：得到JSON数据后
+var cacheDir = api.cacheDir;
+api.writeFile({
+    path: cacheDir+'/自定一个文件名.json',
+    data: JSON.stringify(josn)
+}, function(ret, err){
+
+})
+
+注意要将json转为字符串，否则无法写入，（不转换的话安卓设备可以写入，IOS上是不行的）
+读取：
+api.readFile({
+    path: cacheDir+'/文件名.json'
+}, function(ret, err){
+    if(ret.status){
+        var jsonData = JSON.parse(ret.data);
+    }
+});
+
+注意读的时候将数据转为对象
+
+
+
+================================================
+function lists(param,flag){
+		api.ajax({//
+            url:'http://lbs.qinqinbaby.com/Home/index/specialLists',
+            method:'post',
+            cache:false,
+            timeout:30,
+            dataType:'json',
+            data:{
+                values:param
+            }
+        },function(ret,err){//ret成功时返回数据，err错误时
+
+            if(ret){
+                var data = ret.data.arr;
+                var str = '';
+                for(var i in data){
+                  cacheImg(data[i]['app_vip_banner']);
+                        str +='<li><div class="tp" onclick="baby_list(\'type\','+data[i]['vipid']+')"><img src="'+data[i]['app_vip_banner']+'" alt=""/>';
+                        if(data[i]['vip_starttime'] >= data[i]['now_time1'] && data[i]['vip_starttime'] <= data[i]['now_time2']){
+                            str +='<b class="newicon babygo-bg"></b><div class="time"><b  class="babygo-bg"></b>';
+                        }else{
+                            str +='<b class="newicon"></b><div class="time"><b  class="babygo-bg"></b>';
+                        }
+                        str +='<span><small class="lxftime2" endtime="'+data[i]['endtime']+'" style="background:rgba(0,0,0,0.5)"></small></span>';
+                        str +='</div></div><div class="btm clearfix">';
+                        str +='<p>'+data[i]['vip_name']+'</p><div class="pri"><b>'+data[i]['discount']+'</b><span>折</span></div></div></li>';
+                 }
+                 if(flag){
+                    $('.newhotplan ul').html(str);
+                  }else{  
+                    if(str==''||undefined){
+                        api.toast({msg:'没有更多内容了！'});
+                        $('.load').hide()
+                    }else{
+                        $('.newhotplan ul').append(str);
+                        $('.load').hide()
+                    }
+                   }
+
+            }else{
+                api.toast({
+                    msg:'网络走神了~~'
+                });
+
+            }
+            // showtime();
+        });
+}
+
+ //调用特卖函数
+    lists({'pagenum':20},1);
+
+====================================
+要明白APICloud开发中几个基本规则，Win是一个窗口，Frame是一个子窗口，或者一个类似层的概念，窗口不能叠加，Frame可以叠加，嵌套，但是都是平行的。api和模块提供了很多底层的方法，提供了远远高于HTML5标准的访问权限和机制，这是html5所不能提供的。官方的文档也是有脉络可循的，遵循基本原则，一般都是require，然后初始化或者open等。再比如一个模块，一般都有fixed、fixedOn属性，各有各的作用，梳理好这些规则
+
+
+
+Apicloud常见问题建议方案
+取消ios手机号自动识别
+<meta name="format-detection"content="telephone=no">
+========================================================
+消除ajax跨域问题
+使用官方提供的api.ajax方法
+========================================================
+解决ios头部与状态栏重合
+1.var $header = $api.byId('header');
+$api.fixIos7Bar($header);
+2.若头部使用了fixed定位，改用javascript解决
+         if(api.systemType=='ios'){
+       $('.header').css('padding-top','20px')
+       $('.header+.banner').css('margin-top','64px')
+    }
+=======================================================
+页面传值的几种方法
+1.新开窗口(api.openWin)或子窗口(api.openFrame)或窗口组(api.openFrameGroup)的时候传值使用pageParam
+2.使用api.execScript({}),需要注意的是指定窗口名称的时候一定要看清楚
+3.设置缓存信息，使用$api.setStorage或者api.setPrefs()
+=======================================================
+常用到的事件需要注意的几个细节
+1.tap事件，底层封装，性能优于click，但是不建议使用zepto封装的tap
+         api.addEventListener({
+             name:'tap'
+         },function(ret,err){
+             //operation
+         })
+2.viewappear事件,当页面在主窗口显示时触发（窗口组切换无效）
+         api.addEventListener({
+             name:'viewappear'
+         },function(ret,err){
+             //operation
+         })
+3.scrolltobottom事件，适用于滑到底部刷新
+         api.addEventListener({
+             name:'scrolltobottom'
+         },function(ret,err){
+             //operation
+         })
+=======================================================
+关于apiready的一些注意事项
+apiready是官方建议的方法，它是在文档加载完成后执行，类似jquery的ready方法
+文档加载完成后，api会作为全局变量留存
+=======================================================
+关于页面刷新的几点建议
+......
+=======================================================
+关于ios点击事件无响应的解决方法
+1.ios对touch类事件支持良好，建议使用封装后的tap事件
+2.若第一种方式无效，直接封装成函数，使用onclick调用
+3.使用监听事件
+api.addEventListener({
+    name: 'click'
+}, function(ret, err){
+    api.parseTapmode();
+});
+=======================================================
+文字过长导致换行解决方法
+英文单词过长(word-wrap:break-word;)
+中文过长(overflow: hidden;text-overflow:ellipsis;white-space:nowrap;)
+=======================================================

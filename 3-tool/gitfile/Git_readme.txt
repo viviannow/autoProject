@@ -23,6 +23,154 @@ GitHub网站上就可以看见了， http://github.com/xxx/new-project
 
 
 
+【1】从远程clone一个项目：
+
+如远程有一个jquery-code的项目，
+执行：git clone git@github.com:名/库名.git
+注意：会建立一个【名】文件包，里面有.git文件包，项目就是【名】里面，cd进去[cd js-projects]后就可以操作了。
+可以执行如下：
+git checkout -b 'myBranchName' 创建并进入新分支 git status
+git add [文件名]
+git commit -m "说明"
+git push origin master 提交到远程服务器
+
+分支相关：
+
+
+查看远程分支 
+
+
+
+
+
+github-study
+关于github的一点自己的整理。
+
+Fork 就是服务端的克隆
+star 标星号
+watch 监视
+pull 拉
+push 推，推动 requests 要求; 需要
+lssues 分配
+gist 要点，主旨; 大要
+spaces 空间
+soft wrap
+Commit changes 提交修改
+cancel 取消
+bootcamp 公共测试版软件
+set up 建立; 准备; 安排; 引起;
+
+collaborate 合作，协作; 协调
+projects 计划
+remote 远程的
+counting objects 总项目
+resolving解决
+deltas 变量增量
+checking 
+connectivity 连通性
+follers跟随者
+following跟随了
+Organizations 组织; 机构; 团体;
+Public activity 公共活动
+contributions 贡献
+repositories 仓库; 宝库; 存放处
+mirrors 镜子
+edit profile 修改轮廓
+
+【命令总结】 Github配制： $ git config --global user.name "viviannow" $ git config --global user.email "572755296@qq.com"
+
+创建文件类： $ mkdir learngit $ cd learngit $ pwd 显示文件目录 $ git init成为git仓库
+
+$ git add readme.txt 加入缓存 $ git commit -m "wrote a readme file" 加入仓库
+
+$ git status 看状态 $ git diff readme.txt 看不同
+
+$ git log 日志 $ git log --pretty=oneline 一行显示日志
+
+$ git reset --hard HEAD^ 返回上一个版本 $ git reset --hard 3628164 返回到3628164版本
+
+$ cat readme.txt 查看内容
+
+$ git reflog 用来记录你的每一次命令：
+
+git diff HEAD -- readme.txt查看工作区和版本库里面最新版本的区别
+
+git checkout -- file可以丢弃工作区的修改--很重要，没有--，就变成了“创建一个新分支”的命令，
+
+git reset HEAD file可以把暂存区的修改撤销掉（unstage重新放回工作区
+
+$ rm test.txt 删除test文件
+
+$ ssh-keygen -t rsa -C "youremail@example.com" 创建SSH Key：
+
+$ git clone git@github.com:michaelliao/gitskills.git 远程克隆
+
+$ git checkout -b dev 命令加上-b参数表示创建并切换
+
+git branch命令查看当前分支：
+
+$ git checkout master 切换回master分支
+
+$ git merge dev 把dev分支的工作成果合并到master分支上[在master分支下]
+
+$ git branch -d dev 删除dev分支
+
+Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容，我们修改如下后保存：
+
+$ git log --graph --pretty=oneline --abbrev-commit 用带参数git log可以看到分支的合并情况
+
+$ git merge --no-ff -m "merge with no-ff" dev 准备合de分支注意--no-ff参表示禁用Fast forward
+
+$ git log --graph --pretty=oneline --abbrev-commit
+
+$ git stash 可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作
+
+$ git checkout dev
+
+$ git stash list 用git stash list命令看看
+
+作现场还在，Git把stash内容存在某个地方了，但是需要恢复一下，有两个办法： git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除； git stash pop，恢复的同时把stash内容也删了： $ git stash apply stash@{0} 然后恢复指定的stash，
+
+分支还没有被合并要删除将丢失掉修改如要强行删除要使用命令git branch -D feature-vulcan
+
+要查看远程库的信息，用git remote
+
+用git remote -v显示更详细的信息：
+
+可以用git branch命令看看
+
+$ git push origin master把该分支推送到远程库对应的远程分支上
+
+查看分支：git branch
+
+创建分支：git branch
+
+切换分支：git checkout
+
+创建+切换分支：git checkout -b
+
+合并某分支到当前分支：git merge
+
+删除分支：git branch -d
+
+查看远程库信息，使用git remote -v；
+
+本地新建的分支如果不推送到远程，对其他人就是不可见的； 从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交； 在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+
+建立本地分支和远程分支的关联用git branch --set-upstream branch-name origin/branch-name； 从远程抓取分支，使用git pull，如果有冲突，要先处理冲突
+
+$ git tag v1.0 $ git tag $ git config --global color.ui true 让Git显示颜色，会让命令输出看起来更醒目
+
+特殊的.gitignore文件把文件忽略掉
+
+Windows:
+Thumbs.dbehthumbs
+
+.dbDesktop.ini
+删除git的repositories点进项目，右侧的settings中最下面就是
+
+
+
 
 
 
