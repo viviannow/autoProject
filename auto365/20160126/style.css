@@ -1,0 +1,16 @@
+*{margin: 0;padding: 0;}
+.wrap{width: 540px;height: 258px;overflow: hidden;position: relative;background: #ccc;border:1px solid #ccc;}
+.wrap ul{position: relative;}
+.wrap img{height: 258px;width: 540px;}
+.wrap .btm{position: absolute;left: 0;bottom: 10px;background: #333;text-align: center;width: 100%;}
+.wrap .btm span{display: inline-block;width: 10px;height: 10px;background: red}
+
+
+
+
+
+
+
+
+
+
