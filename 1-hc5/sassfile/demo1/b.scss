@@ -1,0 +1,287 @@
+@charset "UTF-8";
+/* this is css's  note in cssfile*/
+@import "reset.css";
+@import "a";
+p{
+	background:#333;
+}
+// this is css's two not in cssfile
+// 
+$fontSize:12px;
+body{
+	font-size:$fontSize;
+}
+
+
+$baseLineHeight:1.5 !default;
+body{
+	line-height:$baseLineHeight;
+}
+
+
+$baseLineHeight: 2;
+$baseLineHeight: 1.5 !default;
+body{
+	line-height: $baseLineHeight;
+}
+
+
+
+
+$borderDirection: top !default;
+$baseFontSize:    12px !default;
+$baseLineHeight:  1.5 !default;
+
+.border-#{$borderDirection}{
+	border-#{#borderDirection}:1px solid #ccc;
+}
+
+body{
+	font:#{$baseFontSize}/#{$baseLineHeight};
+}
+
+
+$linkClor:#082 #ccc !default;
+
+a{
+	color:nth($linkClor,1);
+	&:hover{
+		color:nth($linkClor,2);
+	}
+}
+
+$headlings:(h1:2em,h2:1.5em,h3:1.2em);
+
+@each $header,$size in $headlings{
+	#{$header}{
+		fontSize:$size;
+	}
+}
+
+
+/* 你说类 */
+
+$fontSize : 12px;
+$color :#000;
+body{
+	$fontSize:14px;
+	$color:#fff !global;
+	font-size:$fontSize;
+	color:$color;
+}
+
+p{
+	font-size:$fontSize;
+	color:$color;
+}
+
+
+#toap_nav{
+	line-height:40px;
+	txt-transorm:capitalize;
+	background-color:#333;
+	li{float:left;}
+	a{ display:block;
+		padding: 0 10px;
+		color: #fff;
+		&:hover{
+			color: #ddd;
+		}
+	}
+}
+
+.fackshadow{
+	border:{
+		style:solid;
+		left:{
+			width:4px;
+			color:#888;
+		}
+		right:{
+			width:2px;
+			color:#ccc;
+		}
+	}
+}
+
+
+.parent-1{
+	color:#f00;
+	.child{width:100px;}
+}
+
+.parent-2{
+	color:#f00;
+	@at-root .child{
+		width:200px;
+	}
+}
+
+
+@mixin conter-block{
+	margin-left:auto;
+	margin-right:auto;
+}
+.demo{
+	@include conter-block;
+}
+
+
+
+
+@mixin opacity($opacity:50){
+	opacity:$opacity/100;
+	filter:alpha(opacity=$opacity);
+}
+.opacity{
+	@include opacity;
+}
+opacity-80{
+	@include opacity(80);
+}
+
+
+@mixin horizontal-line($border:1px dashed #ccc,$padding:100px){
+	border-bottom:$border;
+	padding-top:$padding;
+	padding-bottom:$padding;
+}
+
+.imgtext-h li{
+	@include horizontal-line(1px solid #ccc);
+}
+
+.imgtext-h-porduct li{
+	@include horizontal-line($padding:15px);
+}
+
+@mixin box-shadow($shadow...){
+	-webkit-box-shadow:$shadow;
+	box-shadow:$shadow;
+}
+.box{
+	border:1px solid #ccc;
+	@include box-shadow(0 2px 2px rgba(0,0,0,.3),0 3px 3px rgba(0,0,0,0.3),0 3px 3px rgba(0,0,0,0.3));
+}
+
+
+/* @content */
+@mixin max-screen($res){
+	@media only screen and(max-width:$res){
+		@content;
+	}
+}
+
+@include max-screen(480px){
+	body{
+		color:red;
+	}
+}
+
+@include max-screen(580px){
+	body{
+		color:green;
+	}
+}
+
+// 
+h1{border:1px solid #ff9;}
+
+.speacker{
+	@extend h1;
+	border-width:2px;
+}
+
+// %
+%ir{
+	color:transparent;
+	text-shadow:none;
+	background-color:transparent;
+	border:0;
+}
+
+
+%clearfix{
+	 zoom:1;
+	  &:before,
+	  &:after {
+	    content: "";
+	    display: table;
+	    font: 0/0 a;
+	  }
+	  &:after {
+	    clear: both;
+	  }
+}
+
+#header{
+	h1{
+		@extend %ir;
+		width:300px;
+	}
+}
+.ir{
+	@extend %ir;
+}
+
+
+// function
+$baseFontSize:      10px;
+$gray:              #000;  
+@function pxToRem($px){
+	@return $px / $baseFontSize *1rem;
+}        
+body{
+	font-size:$baseFontSize;
+	
+}
+.test{
+	font-size:pxToRem(16px);
+	color:darken($gray,10%);
+}
+
+$baseFontSize: 14px !default;
+$baseLineHeight: 1.5 !default;
+$baseGap: $baseFontSize * $baseLineHeight !default;
+
+$halfBaseGap :$baseGap / 2 !default;
+$smallFontSize: $baseFontSize -2px !default;
+
+$_columns : 12 !default;
+
+/*  */
+@for $i from 1 through 3 {
+	.item-#{$i} {width : 2em *$i;}
+}
+
+
+/*  */
+
+$animal-list:puma,sea-slug,egret,salamander;
+@each $animal in $animal-list{
+	.#{$animal}-icon{
+		background-image:url('/images/#{$animal}.png')
+	}
+}
+/*  */
+$animal-data:(puma,black,default),(sea-slug,blue,pointer),(egret,white,more);
+
+@each $animal,$color,$cursor in $animal-data{
+	.#{$animal}-icon{
+		background-image:url('/images/#{$animal}.png');
+		border:2px solid $color;
+		cursor:$cursor;
+	}
+}
+
+/*  */
+$headlings:(h1:2em,h2:1.5em,h3:1.2em);
+@each $header,$size in $headlings{
+	#{$header}{
+		font-size: $size;
+	}
+}
+h2{
+	font-size:21px;
+	a{color:#cce;}
+}

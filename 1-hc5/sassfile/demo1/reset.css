@@ -1,0 +1,30 @@
+/*
+Error: Invalid CSS after "...ort "reset.css"": expected selector or at-rule, was "@import "a""
+        on line 2 of F:\sassfile\demo1\b.scss
+
+1: @import "reset.css"
+2: @import "a"
+3: p{
+4: 	background:#333;
+5: }
+
+Backtrace:
+F:\sassfile\demo1\b.scss:2
+c:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1161:in `expected'
+c:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1097:in `expected'
+c:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:43:in `parse'
+c:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:403:in `_to_tree'
+c:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+c:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:295:in `render_with_sourcemap'
+c:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:412:in `run'
+c:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:63:in `process_result'
+c:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/exec/base.rb:52:in `parse'
+c:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/exec/base.rb:19:in `parse!'
+c:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.19/bin/sass:13:in `<top (required)>'
+C:/Ruby22/bin/sass:23:in `load'
+C:/Ruby22/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...ort \"reset.css\"\": expected selector or at-rule, was \"@import \"a\"\"\A         on line 2 of F:\sassfile\demo1\b.scss\A \A 1: @import \"reset.css\"\A 2: @import \"a\"\A 3: p{\A 4: 	background:#333;\A 5: }"; }

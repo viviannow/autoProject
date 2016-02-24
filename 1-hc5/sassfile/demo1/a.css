@@ -1,0 +1,35 @@
+/* include */
+#main p { color: #fff; width: 97%; }
+#main p .redbox { background: #f0f0f0; }
+
+/* parent */
+a { font-weight: bold; }
+a:hover { text-decoration: underline; }
+body.firefox a { font-weight: normal; }
+
+/* attribute */
+.func { font-family: arial; font-size: 30em; font-weight: bold; }
+
+/* $ */
+/* not transfor */
+#main { width: 5em; }
+
+/* mixin */
+.header:before { content: "hi firefox users"; }
+
+/*  */
+p { width: 10px; }
+
+/*  */
+p { font: 12px/30px; }
+
+/*  */
+p.foo { border-color: blue; }
+
+/*  */
+/*  */
+.sidebar { width: 300px; }
+
+@media screen and (orientation: landscape) { .sidebar { width: 500px; } }
+
+/*# sourceMappingURL=a.css.map */

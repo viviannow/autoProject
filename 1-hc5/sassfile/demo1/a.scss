@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/* include */
+#main p{
+	color:#fff;
+	width:97%;
+	.redbox{
+		background: #f0f0f0;
+	}
+}
+
+/* parent */
+a{
+	font-weight:bold;
+	&:hover{text-decoration:underline;}
+	body.firefox &{font-weight:normal;}
+}
+
+/* attribute */
+.func{
+	font:{
+		family:arial;
+		size:30em;
+		weight:bold;
+	}
+}
+
+/* $ */
+
+$width:5em;/* not transfor */
+#main{width:$width;}
+
+
+/* mixin */
+@mixin firefox-message($selector){
+    #{$selector}:before{
+		content :"hi firefox users"
+	}
+}
+@include firefox-message('.header');
+
+/*  */
+p{
+	width:2px + 8px;
+}
+
+/*  */
+p{
+	$font-size:12px;
+	$line-height:30px;
+	font:#{$font-size}/#{$line-height};
+}
+
+/*  */
+$name:foo;
+$attr:border;
+p.#{$name}{
+	#{$attr}-color:blue;
+}
+
+
+/*  */
+
+// @import "foo.scss";
+// @import "foo.css";
+
+// @import "rounde","text-shadow";
+
+
+/*  */
+
+
+.sidebar{
+	width:300px;
+}
+@media screen and(orientation:landscape){
+	.sidebar{
+		width:500px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

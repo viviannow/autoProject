@@ -1,0 +1,185 @@
+/* this is css's  note in cssfile*/
+@import url(reset.css);
+body {
+  background: #eee; }
+
+p {
+  background: #333; }
+
+body {
+  font-size: 12px; }
+
+body {
+  line-height: 1.5; }
+
+body {
+  line-height: 2; }
+
+.border-top {
+  border-#borderDirection: 1px solid #ccc; }
+
+body {
+  font: 12px/2; }
+
+a {
+  color: #082; }
+  a:hover {
+    color: #ccc; }
+
+h1, .speacker {
+  fontSize: 2em; }
+
+h2 {
+  fontSize: 1.5em; }
+
+h3 {
+  fontSize: 1.2em; }
+
+body {
+  font-size: 14px;
+  color: #fff; }
+
+p {
+  font-size: 12px;
+  color: #fff; }
+
+#toap_nav {
+  line-height: 40px;
+  txt-transorm: capitalize;
+  background-color: #333; }
+  #toap_nav li {
+    float: left; }
+  #toap_nav a {
+    display: block;
+    padding: 0 10px;
+    color: #fff; }
+    #toap_nav a:hover {
+      color: #ddd; }
+
+.fackshadow {
+  border-style: solid;
+  border-left-width: 4px;
+  border-left-color: #888;
+  border-right-width: 2px;
+  border-right-color: #ccc; }
+
+.parent-1 {
+  color: #f00; }
+  .parent-1 .child {
+    width: 100px; }
+
+.parent-2 {
+  color: #f00; }
+  .child {
+    width: 200px; }
+
+.demo {
+  margin-left: auto;
+  margin-right: auto; }
+
+.opacity {
+  opacity: 0.5;
+  filter: alpha(opacity=50); }
+
+opacity-80 {
+  opacity: 0.8;
+  filter: alpha(opacity=80); }
+
+.imgtext-h li {
+  border-bottom: 1px solid #ccc;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+
+.imgtext-h-porduct li {
+  border-bottom: 1px dashed #ccc;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.box {
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 3px 3px rgba(0, 0, 0, 0.3), 0 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 3px 3px rgba(0, 0, 0, 0.3), 0 3px 3px rgba(0, 0, 0, 0.3); }
+
+/* @content */
+@media only screen and (max-width: 480px) {
+  body {
+    color: red; } }
+@media only screen and (max-width: 580px) {
+  body {
+    color: green; } }
+h1, .speacker {
+  border: 1px solid #ff9; }
+
+.speacker {
+  border-width: 2px; }
+
+#header h1, #header .speacker, .ir {
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0; }
+
+#header h1, #header .speacker {
+  width: 300px; }
+
+body {
+  font-size: 10px; }
+
+.test {
+  font-size: 1.6rem;
+  color: black; }
+
+/*  */
+.item-1 {
+  width: 2em; }
+
+.item-2 {
+  width: 4em; }
+
+.item-3 {
+  width: 6em; }
+
+/*  */
+.puma-icon {
+  background-image: url("/images/puma.png"); }
+
+.sea-slug-icon {
+  background-image: url("/images/sea-slug.png"); }
+
+.egret-icon {
+  background-image: url("/images/egret.png"); }
+
+.salamander-icon {
+  background-image: url("/images/salamander.png"); }
+
+/*  */
+.puma-icon {
+  background-image: url("/images/puma.png");
+  border: 2px solid black;
+  cursor: default; }
+
+.sea-slug-icon {
+  background-image: url("/images/sea-slug.png");
+  border: 2px solid blue;
+  cursor: pointer; }
+
+.egret-icon {
+  background-image: url("/images/egret.png");
+  border: 2px solid white;
+  cursor: more; }
+
+/*  */
+h1, .speacker {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.2em; }
+
+h2 {
+  font-size: 21px; }
+  h2 a {
+    color: #ccc; 
+  }
