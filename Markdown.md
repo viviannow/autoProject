@@ -1,4 +1,5 @@
-﻿## 主要内容 ##
+﻿`
+## 主要内容 ##
 > #### Markdown是_什么_？ ####
 > #### _谁_发明了这么个东西？ ####
 > #### _为什么_要使用它？ ####
@@ -207,3 +208,4 @@ Markdown的使用者：
 |moos-young                            |[https://github.com/younghz/moos-young](https://github.com/younghz/moos-young "tianchi")|
 
 关于其它扩展语法可参见具体工具的使用说明。
+`
