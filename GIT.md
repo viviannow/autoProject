@@ -1,3 +1,7 @@
+website:
+#http://git-scm.com/docs
+#http://www.runoob.com/manual/github-git-cheat-sheet.pdf
+
 ## 安装完成后，还需要最后一步设置
 
 >```$ git config --global user.name "Your Name"```     
