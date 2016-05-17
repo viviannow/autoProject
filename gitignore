@@ -1,0 +1,5 @@
+#忽略gitignore文件
+node_modules
+
+#忽略后缀名为.o和.a的文件
+*.[oa]
