@@ -1,0 +1,22 @@
+{
+  "name": "viviannow",
+  "version": "1.0.0",
+  "description": ":blush::blush::blush:简历看过来:::::: http://viviannow.github.io/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viviannow/autoProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viviannow/autoProject/issues"
+  },
+  "homepage": "https://github.com/viviannow/autoProject#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
