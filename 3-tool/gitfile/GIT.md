@@ -1,3 +1,37 @@
+
+本地项目提交到github:
+git init
+touch README
+git add README
+git commit -m 'first commit'
+git remote add origin git@github.com:youusername/test.git
+git push -u origin master
+
+确保远端有这个项目 名字相同
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 网址： https://github.com/
 
 初次提交本地git 到远程github:
