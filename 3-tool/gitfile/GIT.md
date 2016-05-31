@@ -10,7 +10,8 @@ git push -u origin master
 确保远端有这个项目 名字相同
 
 
-
+ 删除的文件提交 
+ git rm ISOfile -r
 
 
 
