@@ -1,20 +1,2 @@
-﻿##   我还是叫vivian 吧！！！
+忘记在哪看得了，对于新知识，先做个大概的规类，用到了再学。不然也会忘记，把基础的东西整好。  
 
-:blush::blush::blush:简历看过来:::::: http://viviannow.github.io/ 
-
-
-
-##目录
-
- . hc
-
- . jsnode
-
- . tool 
-
- . test
-
- . websitefile
-
-
- . ECMAScript
