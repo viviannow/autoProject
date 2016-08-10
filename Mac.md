@@ -1,0 +1,3 @@
+Command ⌘
+Shift ⇧
+Caps Lock ⇪
