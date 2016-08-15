@@ -9,8 +9,8 @@
 
 ## 工具类  
 [ESLint](http://eslint.org/ ) 代码检测工具  
-[]()    
-[]()    
+[http://blog.fens.me/series-nodejs/](http://blog.fens.me/series-nodejs/)    
+[Node.js开发框架Express4.x](http://www.tuicool.com/articles/U7buiy)    
 []()    
 [Web Performance/Publications](https://www.w3.org/wiki/Web_Performance/Publications)   
  
@@ -20,3 +20,4 @@
 [jasmine]( http://jasmine.github.io/ )  
 [qunit]( https://qunitjs.com/ )  
 [Jest]( https://facebook.github.io/jest/ )  
+
