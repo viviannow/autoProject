@@ -1,41 +1,44 @@
-## 主题文章类  
+## 主题文章类周报类 
 [奇舞周刊](http://old.75team.com   /weekly/)   
 [博客](http://efe.baidu.com   /)  
 [汤姆大叔的博客](http://www.cnblogs.com/TomXu/)  
-## 文章类  
-
 [前端集成开发](https://mp.weixin.qq.com   /s?__biz=MzI2NzExNTczMw==&mid=2653284934&idx=1&sn=af82495f35adea9b919e27a20749145e&scene=1&srcid=0708AigCqTI0RpFMJT6MhAcp&key=77421cf58af4a65386d8a3d36fb7fb3f6a6a4631beb5f8a87c8448d85f1135802d43e85b216f113efa06f19f479902d5&ascene=0&uin=MzAyNjk4MDU1&devicetype=iMac+MacBookPro11%2C1+OSX+OSX+10.10.5+build(14F1808)&version=11020201&pass_ticket=hXS2sgF6aJfo9PbSLZf0ltuHlOg6150rr%2FOnA%2FyFI4Ze2rlQsKd9wrzsPz5yZH%2FV#rd)  
 [我们是如何做好前端工程化和静态资源管理](https://aotu.io   /notes/2016/07/19/A-little-exploration-of-front-end-engineering/)  
 
+[码农周刊](http://weekly.manong.io)    
+[JS前端开发群月报](http://www.kancloud.cn   /jsfront/month/82796)  
+[WEB前端开发](http://www.css88.com)   
+[A JS tip per day!](http://www.jstips.co)  
+[平安科技移动开发二队技术周报	](https://github.com/PaicHyperionDev/MobileDevWeekly)  
+
 ## 工具类  
-[ESLint](http://eslint.org   / ) 代码检测工具  
+[ESLint](http://eslint.org/ )  
 [http://blog.fens.me/series-nodejs/](http://blog.fens.me/series-nodejs/)    
-[Node.js开发框架Express4.x](http://www.tuicool.com   /articles/U7buiy)    
-[]()    
-[Web Performance/Publications](https://www.w3.org   /wiki/Web_Performance/Publications)   
+[Node.js开发框架Express4.x](http://www.tuicool.com/articles/U7buiy)    
+[Web Performance/Publications](https://www.w3.org/wiki/Web_Performance/Publications)   
 
 
 ## 测试框架有很多  
-[mocha]( https://mochajs.org   / )  
-[jasmine]( http://jasmine.github.io   / )  
-[qunit]( https://qunitjs.com   / )  
-[Jest]( https://facebook.github.io   /jest/ )  
+[mocha]( https://mochajs.org/)  
+[jasmine]( http://jasmine.github.io/)  
+[qunit]( https://qunitjs.com/)  
+[Jest]( https://facebook.github.io/jest/)  
 
 
 ### 标准类  
-[w3c标准](https://www.w3.org   /DOM/)  
-[ECMA标准](http://www.ecma-international.org   /ecma-262/5.1/)   
+[w3c标准](https://www.w3.org/DOM/)  
+[ECMA标准](http://www.ecma-international.org/ecma-262/5.1/)   
 
 ### 综合类  
 [前端知识体系](http://www.cnblogs.com/sb19871023/p/3894452.html)     
 [前端知识结构](https://github.com/JacksonTian/fks)     
 [Web前端开发大系概览	](https://github.com/unruledboy/WebFrontEndStack)     
-[Web前端开发大系概览-中文版](http://www.cnblogs.com/unruledboy/p/WebFrontEndStack.html )    
+[Web前端开发大系概览-中文版](http://www.cnblogs.com/unruledboy/p/WebFrontEndStack.html)    
 [免费的编程中文书籍索引	](https://github.com/justjavac/free-programming-books-zh_CN )   
-[前端书籍](https://github.com/dypsilon/frontend-dev-bookmarks  )  
-[前端免费书籍大全](https://github.com/vhf/free-programming-books  )  
-[前端知识体系](http://www.cnblogs.com/sb19871023/p/3894452.html  )     
-[免费的编程中文书籍索引	](https://github.com/justjavac/free-programming-books-zh_CN  )  
+[前端书籍](https://github.com/dypsilon/frontend-dev-bookmarks)  
+[前端免费书籍大全](https://github.com/vhf/free-programming-books)  
+[前端知识体系](http://www.cnblogs.com/sb19871023/p/3894452.html)     
+[免费的编程中文书籍索引	](https://github.com/justjavac/free-programming-books-zh_CN)  
 [智能社 - 精通JavaScript开发](http://study.163.com/course/introduction/224014.htm)  
 [重新介绍 JavaScript（JS 教程）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript)   
 [麻省理工学院公开课：计算机科学及编程导论](http://v.163.com/special/opencourse/bianchengdaolun.html)     
@@ -43,7 +46,7 @@
 [JS函数式编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/ch1.html)   
 [JavaScript Promise迷你书（中文版](http://liubin.github.io/promises-book)  
 [腾讯移动Web前端知识库](https://github.com/AlloyTeam/Mars)  
-[Front-End-Develop-Guide 前端开发指南](	https://github.com/Front-End-Developers-Hunan/Front-End-Develop-Guide)  
+[Front-End-Develop-Guide 前端开发指南](https://github.com/Front-End-Developers-Hunan/Front-End-Develop-Guide)  
 [前端开发笔记本](https://li-xinyang.gitbooks.io/frontend-notebook/content)  
 [大前端工具集 - 聂微东](https://github.com/nieweidong/fetool)  
 [前端开发者手册](https://dwqs.gitbooks.io/frontenddevhandbook/content)  
@@ -52,10 +55,10 @@
 
 ### 入门类
 
-[前端入门教程](	http://www.cnblogs.com/jikey/p/3613082.html)   
-[瘳雪峰的Javascript教程](	http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)  
+[前端入门教程](http://www.cnblogs.com/jikey/p/3613082.html)   
+[瘳雪峰的Javascript教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)  
 [jQuery基础教程](	http://www.imooc.com/view/11)  
-[前端工程师必备的PS技能——切图篇](	http://www.imooc.com/view/506)  
+[前端工程师必备的PS技能——切图篇](http://www.imooc.com/view/506)  
 [结合个人经历总结的前端入门方法 FE-learning](https://github.com/qiu-deqing/FE-learning)  
 
 ### 工具类
@@ -73,7 +76,6 @@ Atom	https://atom.io
 visual studio code	https://code.visualstudio.com   
 
 ###综合效果搜索平台
-
 zoommyapp.com   	http://zoommyapp.com   / 高质量图库
 unsplash.com   	https://unsplash.com   / 高质量图库
 www.pinterest.com   	https://www.pinterest.com   / 图库
@@ -86,14 +88,6 @@ codepen	http://codepen.io   /
 摄图网	http://699pic.com   /
 常用的JavaScript代码片段	http://microjs.com   
 
-### 周报类
-
-奇舞周刊	http://old.75team.com   /weekly/
-码农周刊	http://weekly.manong.io   
-JS前端开发群月报	http://www.kancloud.cn   /jsfront/month/82796
-WEB前端开发	http://www.css88.com   
-A JS tip per day!	http://www.jstips.co
-平安科技移动开发二队技术周报	https://github.com   /PaicHyperionDev/MobileDevWeekly
 
 ### 开发中心
 
@@ -127,7 +121,7 @@ w3help	http://www.w3help.org    综合Bug集合网站
 
 ### 综合API
 
-[javascripting 英文](http://www.javascripting.com)     
+[JavaScript libraries, frameworks,and plugins 英文](http://www.javascripting.com/)     
 [各种流行库搜索](http://microjs.com)        
 [runoob.com包含各种API集合](http://www.runoob.com)        
 [开源中国在线API文档合集](http://tool.oschina.net/apidocs)     
@@ -140,7 +134,7 @@ w3help	http://www.w3help.org    综合Bug集合网站
 [exploring-es6翻译](https://github.com/es6-org/exploring-es6)
 [exploring-es6翻译后预览](http://es6-org.github.io/exploring-es6)
 [阮一峰 es6	](http://es6.ruanyifeng.com)   
-[阮一峰 Javascript	](http://javascript.ruanyifeng.com)   
+[阮一峰 Javascript](http://javascript.ruanyifeng.com)   
 [ECMA-262，第 5 版](http://yanhaijing.com/es5)
 [es5](http://es5.github.io)  
 
@@ -202,13 +196,14 @@ angular学习笔记	http://www.zouyesheng.com   /angular.html
 ### React与webpack
 
 react.js 中文论坛	http://www.react-china.org   
-react.js 官方网址	https://facebook.github.io   /react/index.html   
-react.js 官方文档	https://facebook.github.io   /react/docs/getting-started.html   
-react.js material UI	http://material-ui.com   /#
+[react.js官方网址](https://facebook.github.io/react/index.html)   
+react.js 官方文档	https://facebook.github.io/react/docs/getting-started.html   
+react.js material UI	http://material-ui.com/#
 react.js TouchstoneJS UI	http://touchstonejs.io   
 react.js amazeui UI	http://amazeui.org   /react
 React 入门实例教程 - 阮一峰	http://www.ruanyifeng.com   /blog/2015/03/react.html   
 React Native 中文版	http://wiki.jikexueyuan.com   /project/react-native
+[reactNative官方网址](https://facebook.github.io/react-native/)  
 Webpack 和 React 小书 - 前端乱炖	http://www.html   -js.com   /article/Fakefish%203053
 Webpack 和 React 小书 - gitbook	https://fakefish.github.io   /react-webpack-cookbook
 webpack	https://github.com   /webpack/webpack
@@ -696,12 +691,13 @@ Proton 烟花	http://a-jie.github.io   /Proton/#example
 简历池	http://www.mojianli.com   /resume/view
 haorooms博客	http://www.haorooms.com   /about
 Justin Young	http://cv.youngdze.com   
-面试题
-面试题	地址
+
+### 面试题
+
 那几个月在找工作（百度，网易游戏）	http://www.nowcoder.com   /discuss/3196
-2014最新面试题	http://www.html   -js.com   /article/1743
-阿里前端面试题	http://www.w3cfuns.com   /thread-5598563-2-1.html   
-2016校招内推 -- 阿里巴巴前端 -- 三面面试经历	http://www.cn   blogs.com   /imwtr/p/4685546.html   
+2014最新面试题	http://www.html-js.com/article/1743
+阿里前端面试题	http://www.w3cfuns.com/thread-5598563-2-1.html   
+2016校招内推 -- 阿里巴巴前端 -- 三面面试经历	http://www.cnblogs.com/imwtr/p/4685546.html   
 腾讯面试题	http://www.w3cfuns.com   /article-5599657-1-1.html   
 年后跳槽那点事：乐视+金山+360面试之行	http://www.cn   blogs.com   /lvdabao/p/3660707.html   
 阿里前端面试题上线	http://fatesinger.com   /2722.html   
@@ -726,6 +722,8 @@ BAT及各大互联网公司2014前端笔试面试题：JavaScript篇	http://blog
 如何面试前端工程师	http://www.zhihu.com   /question/19568008
 前端开发面试题	https://github.com   /markyun/My-blog/blob/master/Front-end-Developer-Questions/Questions-and-Answers/README.md
 牛客网-笔试面经	http://www.nowcoder.com   /discuss?type=2
+
+
 iconfont
 iconfont	地址
 中文字体	http://www.zhihu.com   /question/21253343
@@ -837,15 +835,17 @@ F2E 前端导航	http://f2e.im/static/pages/nav/index.html
 
 ### 常用CDN
 
-新浪CDN	http://lib.sinaapp.com   
-百度静态资源公共库	http://cdn.code.baidu.com   
-360网站卫士常用前端公共库CDN服务	http://libs.useso.com   
-Bootstrap中文网开源项目免费 CDN 服务	http://www.bootcdn.cn   
-开放静态文件 CDN - 七牛	http://staticfile.org   
-CDN加速 - jq22	http://www.jq22.com   /cdn
-jQuery CDN	http://code.jquery.com   
-Google jQuery CDN	http://www.google-jquery-cdn.com   
-微软CDN	http://www.asp.net   /ajax/cdn
+[新浪CDN](http://lib.sinaapp.com)     
+[百度静态资源公共库](http://cdn.code.baidu.com)        
+[360网站卫士常用前端公共库CDN服务](http://libs.useso.com)        
+[Bootstrap中文网开源项目免费 CDN 服务](http://www.bootcdn.cn)        
+[开放静态文件 CDN - 七牛](http://staticfile.org)        
+[CDN加速 - jq22](http://www.jq22.com/cdn)     
+[jQuery CDN	](http://code.jquery.com)        
+[Google jQuery CDN](http://www.google-jquery-cdn.com)        
+[微软CDN](http://www.asp.net/ajax/cdn)     
+[JSDELIVR 英文](https://www.jsdelivr.com/)  
+[NPMCDN](https://npmcdn.com/#/)  
 
 ### Git
 
@@ -862,6 +862,7 @@ GitHub 漫游指南	https://github.com   /phodal/github-roam
 GitHub秘籍	https://github.com   /tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md
 使用git和github进行协同开发流程	http://livoras.com   /post/28
 动画方式练习git	http://onlywei.github.io   /explain-git-with-d3
+
 
 ### 各种日期日历
 
@@ -935,16 +936,3 @@ babel ES6转换为ES5	https://github.com   /babel/babel
 SegmentFault写的Markdown解析器	https://github.com   /SegmentFault/HyperDown.js   
 基于node.js的Ghost博客	https://github.com   /TryGhost/Ghost   
 学习react的demos	https://github.com   /ruanyf/react-demos   
-对您可能有用(/感兴趣)的文章：
-   
-那些所倚靠的利器记载     
-如何优雅地使用Sublime Text   
-sublime text 下的Markdown写作   
-新编码神器Atom使用纪要   
-Win下最爱效率神器:AutoHotKey   
-Mac必备软件渐集之ZSH－终极Shell   
-Win下必备神器之Cmder   
-Vimium~让您的Chrome起飞   
-转载请保留原链接：http://www.jeffjade.com   /2016/03/30/104-front-end-tutorial/
-
-
