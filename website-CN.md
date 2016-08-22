@@ -106,7 +106,6 @@ js秘密花园	http://bonsaiden.github.io   /JavaScript-Garden/zh
 w3help	http://www.w3help.org    综合Bug集合网站
 
 ### Nodejs
-[nodejs篇幅比较巨大](http://liuqing.pw)  
 [Node.js包教不包会](https://github.com/alsotang/node-lessons)  
 [nodejs](http://www.rainweb.cn/article/category/Nodejs)  
 [node express入门教程](	http://www.w3cfuns.com/article-5598538-1-1.html)  
@@ -128,11 +127,11 @@ w3help	http://www.w3help.org    综合Bug集合网站
 
 ### 综合API
 
-javascripting	http://www.javascripting.com   
-各种流行库搜索	http://microjs.com   
-runoob.com   -包含各种API集合	http://www.runoob.com   
-开源中国在线API文档合集	http://tool.oschina.net   /apidocs
-devdocs	http://devdocs.io    英文综合API网站
+[javascripting 英文](http://www.javascripting.com)     
+[各种流行库搜索](http://microjs.com)        
+[runoob.com包含各种API集合](http://www.runoob.com)        
+[开源中国在线API文档合集](http://tool.oschina.net/apidocs)     
+[devdocs英文综合API网站	](http://devdocs.io)     
 
 ### Ecmascript
 
