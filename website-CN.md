@@ -845,7 +845,7 @@ F2E 前端导航	http://f2e.im/static/pages/nav/index.html
 [Google jQuery CDN](http://www.google-jquery-cdn.com)        
 [微软CDN](http://www.asp.net/ajax/cdn)     
 [JSDELIVR 英文](https://www.jsdelivr.com/)  
-[NPMCDN](https://npmcdn.com/#/)  
+[NPMCDN](https://unpkg.com/#/)  
 
 ### Git
 
